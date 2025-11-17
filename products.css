@@ -387,6 +387,7 @@ header {
     display: block;
     position: absolute;
     left: 0;
+    color: #ffffff;
   }
 
   .nav-menu {
@@ -453,18 +454,39 @@ header {
     opacity: 1;
   }
 
-  /* Products Page */
+  /* Products Page - Similar to journey-section */
+  .products-main {
+    margin-top: 60px;
+  }
+
+  .products-hero {
+    min-height: 400px;
+    padding: 60px 20px;
+  }
+
   .products-hero h1 {
     font-size: 2rem;
     letter-spacing: 4px;
+    margin-bottom: 20px;
   }
 
   .products-hero p {
     font-size: 1.1rem;
   }
 
+  /* Product Categories */
+  .product-category {
+    padding: 32px 20px;
+    min-height: auto;
+  }
+
+  .category-header {
+    margin-bottom: 32px;
+  }
+
   .category-header h2 {
     font-size: 1.8rem;
+    margin-bottom: 12px;
   }
 
   .category-header p {
@@ -474,11 +496,19 @@ header {
   .products-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 0;
+    padding: 0 10px;
+  }
+
+  .product-item {
+    max-width: 100%;
   }
 
   .product-image {
     height: 350px;
+  }
+
+  .product-info {
+    padding: 24px 20px;
   }
 
   .product-info h3 {
@@ -486,12 +516,17 @@ header {
     min-height: auto;
   }
 
+  .product-description {
+    font-size: 0.95rem;
+  }
+
   .product-price {
     font-size: 1.3rem;
   }
 
-  .products-main {
-    margin-top: 60px;
+  .shop-button {
+    padding: 12px 28px;
+    font-size: 1rem;
   }
 }
 
@@ -514,6 +549,7 @@ header {
     display: block;
     position: absolute;
     left: 0;
+    color: #ffffff;
   }
 
   .nav-menu {
@@ -580,18 +616,62 @@ header {
     opacity: 1;
   }
 
-  /* Products Page */
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+  /* Products Page - Similar to journey-section */
+  .products-main {
+    margin-top: 70px;
+  }
+
+  .products-hero {
+    min-height: 500px;
+    padding: 70px 30px;
+  }
+
+  .products-hero h1 {
+    font-size: 2.4rem;
+    letter-spacing: 5px;
+  }
+
+  .products-hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Product Categories */
+  .product-category {
+    padding: 40px 30px;
+  }
+
+  .category-header {
+    margin-bottom: 40px;
   }
 
   .category-header h2 {
     font-size: 2.2rem;
   }
 
-  .products-main {
-    margin-top: 70px;
+  .category-header p {
+    font-size: 1.08rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .product-image {
+    height: 380px;
+  }
+
+  .product-info {
+    padding: 26px 22px;
+  }
+
+  .product-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
   }
 }
 
