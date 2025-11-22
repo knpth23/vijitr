@@ -460,7 +460,7 @@ header {
   }
 
   .products-hero {
-    min-height: 400px;
+    /* min-height: 400px; */
     padding: 60px 20px;
   }
 
@@ -618,11 +618,11 @@ header {
 
   /* Products Page - Similar to journey-section */
   .products-main {
-    margin-top: 70px;
+    margin-top: 0px;
   }
 
   .products-hero {
-    min-height: 500px;
+    /* min-height: 500px; */
     padding: 70px 30px;
   }
 

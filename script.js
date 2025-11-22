@@ -58,26 +58,69 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 
-navToggle.onclick = toggleMenu;
-menuClose.onclick = closeMenu;
+if (navToggle) navToggle.onclick = toggleMenu;
+if (menuClose) menuClose.onclick = closeMenu;
 
-// ปิดเมนูเมื่อคลิกที่ลิงก์
+// --- Navigation Links Interaction ---
 document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function (e) {
+    // Close menu on mobile
     if (window.innerWidth <= 1024) {
       closeMenu();
+    }
+
+    // Smooth scroll for anchor links
+    const href = this.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Ensure navbar background is reset if needed, though scroll spy handles active state
+      }
     }
   });
 });
 
-// --- Dropdown (mobile only) ---
-document.querySelectorAll('.dropdown > a').forEach(function(el) {
-  el.onclick = function(e) {
-    if(window.innerWidth <= 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle('open');
+// --- Dropdown Interaction (Desktop & Mobile) ---
+document.querySelectorAll('.dropdown > a').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    e.stopPropagation(); // Prevent closing immediately due to document click
+
+    const parent = this.parentElement;
+    const wasOpen = parent.classList.contains('open');
+
+    // Close all other dropdowns
+    document.querySelectorAll('.dropdown').forEach(d => {
+      if (d !== parent) d.classList.remove('open');
+    });
+
+    // Toggle current dropdown
+    if (!wasOpen) {
+      parent.classList.add('open');
+    } else {
+      parent.classList.remove('open');
     }
-  };
+
+    // Toggle navbar background
+    const anyOpen = document.querySelector('.dropdown.open');
+    const navbar = document.querySelector('.navbar');
+    if (anyOpen) {
+      navbar.classList.add('navbar-expanded');
+    } else {
+      navbar.classList.remove('navbar-expanded');
+    }
+  });
+});
+
+// --- Close dropdowns when clicking outside ---
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    const navbar = document.querySelector('.navbar');
+    if (navbar) navbar.classList.remove('navbar-expanded');
+  }
 });
 
 // --- Read More/Show Less for ingredients ---
@@ -96,42 +139,12 @@ function toggleIngredients(btn) {
   }
 }
 
-// --- Dropdown click outside to close ---
-function toggleDropdown(event) {
-  if (window.innerWidth <= 768) {
-    event.preventDefault();
-    const dropdown = event.target.parentElement;
-    dropdown.classList.toggle('open');
-    document.querySelectorAll('.dropdown').forEach(d => {
-      if (d !== dropdown) d.classList.remove('open');
-    });
-  }
-}
-
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
-  }
-});
-
-// --- Smooth scroll ---
-document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-});
-
 // --- Highlight active menu on scroll ---
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
+  if (!navbar) return;
+
   // เพิ่ม scrolled class เมื่อเลื่อนเกิน 100px (ทุกขนาดหน้าจอ)
   if (window.scrollY > 100) {
     navbar.classList.add('scrolled');
@@ -150,7 +163,13 @@ window.addEventListener('scroll', function() {
     }
   });
   navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+    const href = link.getAttribute('href');
+    // Ignore links that are just "#"
+    if (!href || href === "#") {
+      link.classList.remove('active');
+      return;
+    }
+    link.classList.toggle('active', href === '#' + currentId);
   });
 });
 
@@ -160,7 +179,7 @@ const observerOptions = {
   rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
@@ -170,7 +189,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe all animated elements
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const animatedElements = document.querySelectorAll('.channel-card, .fact-card, .point, .info-item, .carousel-item');
   animatedElements.forEach(el => {
     observer.observe(el);
@@ -180,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // --- Form submission handler ---
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const submitBtn = this.querySelector('.submit-button');
     const originalText = submitBtn.textContent;
@@ -189,11 +208,11 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     // Simulate form submission
-    setTimeout(function() {
+    setTimeout(function () {
       submitBtn.textContent = 'Message Sent!';
       submitBtn.style.background = '#4caf50';
 
-      setTimeout(function() {
+      setTimeout(function () {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         submitBtn.style.background = '';
