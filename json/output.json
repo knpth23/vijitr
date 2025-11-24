@@ -1,0 +1,137 @@
+[
+  {
+    "หมวดหมู่":"SKINCARE",
+    "ประเภท":"BODY OIL MIST",
+    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING BODY OIL MIST - VELA SCENT",
+    "กลิ่น":"VELA SCENT",
+    "สี":null,
+    "ขนาด":"60 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"SKINCARE",
+    "ประเภท":"BODY OIL MIST",
+    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING BODY OIL MIST - MAYA SCENT",
+    "กลิ่น":"MAYA SCENT",
+    "สี":null,
+    "ขนาด":"60 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"SKINCARE",
+    "ประเภท":"HAND SERUM",
+    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING HAND SERUM - VELA SCENT",
+    "กลิ่น":"VELA SCENT",
+    "สี":null,
+    "ขนาด":"55 g",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"SKINCARE",
+    "ประเภท":"HAND SERUM",
+    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING HAND SERUM - MAYA SCENT",
+    "กลิ่น":"MAYA SCENT",
+    "สี":null,
+    "ขนาด":"55 g",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
+    "กลิ่น":"HIDDEN GRACE",
+    "สี":"White",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
+    "กลิ่น":"TRACE OF SERENITY",
+    "สี":"White",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - TIME’S EMBRACE",
+    "กลิ่น":"TIME’S EMBRACE",
+    "สี":"White",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
+    "กลิ่น":"HIDDEN GRACE",
+    "สี":"Black",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
+    "กลิ่น":"TRACE OF SERENITY",
+    "สี":"Black",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"HOME DIFFUSER",
+    "รายการสินค้า":"HOME DIFFUSER - TIME’S EMBRACE",
+    "กลิ่น":"TIME’S EMBRACE",
+    "สี":"Black",
+    "ขนาด":"50 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"INTERIOR PERFUME",
+    "รายการสินค้า":"SCENT VEIL - HIDDEN GRACE",
+    "กลิ่น":"HIDDEN GRACE",
+    "สี":null,
+    "ขนาด":"10 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"INTERIOR PERFUME",
+    "รายการสินค้า":"SCENT VEIL - TRACE OF SERENITY",
+    "กลิ่น":"TRACE OF SERENITY",
+    "สี":null,
+    "ขนาด":"10 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"INTERIOR PERFUME",
+    "รายการสินค้า":"SCENT VEIL - TIME’S EMBRACE",
+    "กลิ่น":"TIME’S EMBRACE",
+    "สี":null,
+    "ขนาด":"10 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"ESSENTIAL OIL",
+    "รายการสินค้า":"100% ESSENTIAL OIL - SERENE NIGHTFALL",
+    "กลิ่น":"SERENE NIGHTFALL",
+    "สี":null,
+    "ขนาด":"10 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  },
+  {
+    "หมวดหมู่":"ATMOSPHERE",
+    "ประเภท":"100% ESSENTIAL OIL",
+    "รายการสินค้า":"100% ESSENTIAL OIL - RESPIRE QUIETUDE",
+    "กลิ่น":"RESPIRE QUIETUDE",
+    "สี":null,
+    "ขนาด":"10 ml",
+    "Img":"/img/products/skin/vela_body_oil_mist.png"
+  }
+]

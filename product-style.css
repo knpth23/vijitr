@@ -1,0 +1,566 @@
+/* Product Page Specific Styles */
+
+.product-main {
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+/* Navbar for Product Page */
+.navbar-product {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-product .brand {
+  color: #687875;
+}
+
+.navbar-product .nav-toggle {
+  color: #2c2c2c;
+}
+
+.navbar-product .nav-menu > li > a {
+  color: #2c2c2c;
+}
+
+.navbar-product .nav-menu a span::after {
+  background: #687875;
+}
+
+/* Mega Menu for Product Page */
+.navbar-product .dropdown-menu {
+  background: #ffffff;
+}
+
+.navbar-product .mega-column a {
+  color: #687875;
+}
+
+.navbar-product .mega-column a:hover {
+  color: #2c2c2c;
+}
+
+.navbar-product .dropdown.open > a {
+  color: #687875;
+}
+
+/* Hero Section */
+.product-hero {
+  height: 400px;
+  background: linear-gradient(135deg, #687875 0%, #4a5a5a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 200;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  transition: top 0.3s ease;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.filter-btn {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  padding: 12px 28px;
+  border: 2px solid rgba(104, 120, 117, 0.3);
+  background: #fff;
+  color: #687875;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+  background: rgba(104, 120, 117, 0.1);
+  border-color: #687875;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #687875;
+  color: #fff;
+  border-color: #687875;
+  box-shadow: 0 4px 16px rgba(104, 120, 117, 0.3);
+}
+
+/* Products Section */
+.products-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  min-height: 60vh;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(104, 120, 117, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 48px rgba(104, 120, 117, 0.2);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  /* background: #f0f0f0; */
+  position: relative;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  /* padding: 20px; */
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.1);
+}
+
+.product-card-content {
+  padding: 24px 20px;
+  /* background: linear-gradient(135deg, rgba(104,120,117,0.02) 0%, rgba(104,120,117,0.06) 100%); */
+}
+
+.product-card-title {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  min-height: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.product-badge {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  background: rgba(104, 120, 117, 0.15);
+  color: #687875;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.product-card-scent {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.product-card-scent strong {
+  color: #687875;
+  font-weight: 600;
+}
+
+/* Product Modal */
+.product-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.product-modal.active {
+  display: block;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 24px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  /* animation: scaleIn 0.3s ease-out; */
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c2c2c;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close:hover {
+  background: #687875;
+  color: #fff;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 40px 40px 40px;
+}
+
+.modal-image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #f8f9fa; */
+  border-radius: 18px;
+  padding: 40px;
+}
+
+.modal-image-section img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-details h2 {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.modal-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.info-badge {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  background: rgba(104, 120, 117, 0.15);
+  color: #687875;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.modal-specs {
+  background: rgba(104, 120, 117, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(104, 120, 117, 0.1);
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-weight: 600;
+  color: #687875;
+  font-size: 1rem;
+}
+
+.spec-value {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 1rem;
+}
+
+.modal-description {
+  margin-bottom: 28px;
+}
+
+.modal-description p {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.modal-buy-btn {
+  width: 100%;
+  /* max-width: 300px; */
+  margin-top: 12px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1.2rem;
+  color: #687875;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.empty-state-title {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1.5rem;
+  color: #687875;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.empty-state-text {
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 1rem;
+  color: #999;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .product-hero {
+    height: 300px;
+  }
+
+  .filter-section {
+    top: 60px;
+    padding: 30px 15px;
+  }
+
+  .filter-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+    padding: 60px 20px 30px 20px;
+    gap: 30px;
+  }
+
+  .modal-image-section {
+    padding: 30px;
+  }
+
+  .modal-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-buy-btn {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-card-image {
+    height: 280px;
+  }
+
+  .filter-container {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+}
+
+/* Staggered Animation for Product Cards */
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.4s; }
+.product-card:nth-child(9) { animation-delay: 0.45s; }
+
+/* Scrollbar Styling for Modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #687875;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #4a5a5a;
+}

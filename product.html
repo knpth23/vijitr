@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Vijitr</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product-style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-product scrolled">
+    <div class="navbar-header">
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="brand">VIJITR</div>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="product.html"><span>New</span></a></li>
+      <li class="dropdown">
+        <a href="#"><span>Skincare</span></a>
+        <div class="dropdown-menu">
+          <div class="mega-menu-content">
+            <div class="mega-column">
+              <ul>
+                <li><a href="product.html?type=BODY OIL MIST"><span>Body Oil Mist</span></a></li>
+                <li><a href="product.html?type=HAND SERUM"><span>Hand Serum</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-image">
+              <span>Image</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#"><span>Atmosphere</span></a>
+        <div class="dropdown-menu">
+          <div class="mega-menu-content">
+            <div class="mega-column">
+              <ul>
+                <li><a href="product.html?type=HOME DIFFUSER"><span>Home Diffuser</span></a></li>
+                <li><a href="product.html?type=INTERIOR PERFUME"><span>Interior Perfume</span></a></li>
+                <li><a href="product.html?type=ESSENTIAL OIL"><span>Essential Oil</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-image">
+              <span>Image</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html#sale"><span>Our Store</span></a></li>
+      <li class="dropdown">
+        <a href="#"><span>About Us</span></a>
+        <div class="dropdown-menu">
+          <div class="mega-menu-content">
+            <div class="mega-column">
+              <ul>
+                <li><a href="index.html#journey"><span>Our Committed Journey</span></a></li>
+                <li><a href="index.html#facts"><span>Key Facts</span></a></li>
+                <li><a href="index.html#sustainability"><span>Sustainability</span></a></li>
+                <li><a href="index.html#contact"><span>Contact Us</span></a></li>
+              </ul>
+            </div>
+            <div class="mega-image">
+              <span>Image</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <button class="menu-close" aria-label="Close menu">&times;</button>
+  </nav>
+
+  <main class="product-main">
+    <!-- Hero Section -->
+    <section class="product-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Our Collection</h1>
+        <p class="hero-subtitle">Discover the art of holistic wellbeing</p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <!-- <section class="filter-section">
+      <div class="filter-container">
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="SKINCARE">Skincare</button>
+        <button class="filter-btn" data-category="ATMOSPHERE">Atmosphere</button>
+      </div>
+      <div class="filter-container">
+        <button class="filter-btn type-filter" data-type="all">All Types</button>
+        <button class="filter-btn type-filter" data-type="BODY OIL MIST">Body Oil Mist</button>
+        <button class="filter-btn type-filter" data-type="HAND SERUM">Hand Serum</button>
+        <button class="filter-btn type-filter" data-type="HOME DIFFUSER">Home Diffuser</button>
+        <button class="filter-btn type-filter" data-type="INTERIOR PERFUME">Interior Perfume</button>
+        <button class="filter-btn type-filter" data-type="ESSENTIAL OIL">Essential Oil</button>
+      </div>
+    </section> -->
+
+    <!-- Products Grid -->
+    <section class="products-section">
+      <div class="products-grid" id="products-grid">
+        <!-- Products will be loaded here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal" id="product-modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image-section">
+            <img src="" alt="" id="modal-image" />
+          </div>
+          <div class="modal-details">
+            <h2 id="modal-title"></h2>
+            <div class="modal-info">
+              <div class="info-badge" id="modal-category"></div>
+              <div class="info-badge" id="modal-type"></div>
+            </div>
+            <div class="modal-specs">
+              <div class="spec-item">
+                <span class="spec-label">Scent:</span>
+                <span class="spec-value" id="modal-scent"></span>
+              </div>
+              <div class="spec-item" id="modal-color-container">
+                <span class="spec-label">Color:</span>
+                <span class="spec-value" id="modal-color"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Size:</span>
+                <span class="spec-value" id="modal-size"></span>
+              </div>
+            </div>
+            <div class="modal-description">
+              <p>Experience the essence of luxury with our carefully crafted formulation.
+              Each product is designed to provide a holistic wellbeing experience that combines
+              safe dermatological care with sophisticated scents.</p>
+            </div>
+            <button class="buy-button modal-buy-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">VIJITR</div>
+      <div class="footer-links">
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#journey">About Us</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <img
+            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+            alt="Facebook"
+            width="24"
+          />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img
+            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+            alt="Instagram"
+            width="24"
+          />
+        </a>
+        <a href="#" aria-label="Line">
+          <img
+            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg"
+            alt="Line"
+            width="24"
+          />
+        </a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 Vijitr. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="product-script.js"></script>
+</body>
+</html>

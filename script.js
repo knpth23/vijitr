@@ -64,10 +64,8 @@ if (menuClose) menuClose.onclick = closeMenu;
 // --- Navigation Links Interaction ---
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', function (e) {
-    // Close menu on mobile
-    if (window.innerWidth <= 1024) {
-      closeMenu();
-    }
+    // ไม่ปิดเมนูถ้าเป็น dropdown parent link
+    const isDropdownParent = this.parentElement.classList.contains('dropdown');
 
     // Smooth scroll for anchor links
     const href = this.getAttribute('href');
@@ -76,7 +74,10 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
-        // Ensure navbar background is reset if needed, though scroll spy handles active state
+        // Close menu on mobile only for actual navigation links (not dropdown parents)
+        if (window.innerWidth <= 1024 && !isDropdownParent) {
+          closeMenu();
+        }
       }
     }
   });
@@ -110,6 +111,20 @@ document.querySelectorAll('.dropdown > a').forEach(function (el) {
       navbar.classList.add('navbar-expanded');
     } else {
       navbar.classList.remove('navbar-expanded');
+    }
+  });
+});
+
+// --- Close menu when clicking on dropdown sub-links on mobile ---
+document.querySelectorAll('.dropdown-menu a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    // Close menu on mobile when clicking sub-menu items
+    if (window.innerWidth <= 1024) {
+      setTimeout(() => {
+        closeMenu();
+        // Also close all dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+      }, 100);
     }
   });
 });
