@@ -1,5 +1,6 @@
 // Product Page JavaScript
 let allProducts = [];
+let displayedProducts = []; // เก็บสินค้าที่กำลังแสดงอยู่
 let currentFilter = 'all';
 let currentType = 'all';
 
@@ -47,7 +48,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
     "กลิ่น":"HIDDEN GRACE",
     "สี":"White",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (W).png"
   },
   {
@@ -56,7 +57,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
     "กลิ่น":"TRACE OF SERENITY",
     "สี":"White",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (W).png"
   },
   {
@@ -65,7 +66,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - TIME'S EMBRACE",
     "กลิ่น":"TIME'S EMBRACE",
     "สี":"White",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (W).png"
   },
   {
@@ -74,7 +75,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
     "กลิ่น":"HIDDEN GRACE",
     "สี":"Black",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (Black).png"
   },
   {
@@ -83,7 +84,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
     "กลิ่น":"TRACE OF SERENITY",
     "สี":"Black",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (Black).png"
   },
   {
@@ -92,7 +93,7 @@ const fallbackProducts = [
     "รายการสินค้า":"HOME DIFFUSER - TIME'S EMBRACE",
     "กลิ่น":"TIME'S EMBRACE",
     "สี":"Black",
-    "ขนาด":"50 ml",
+    "ขนาด":"100 ml",
     "Img":"product/Home Diffuser (Black).png"
   },
   {
@@ -174,8 +175,12 @@ function displayProducts(products) {
         <p class="empty-state-text">Try adjusting your filters</p>
       </div>
     `;
+    displayedProducts = [];
     return;
   }
+
+  // เก็บสินค้าที่กำลังแสดงไว้ใช้สำหรับ modal
+  displayedProducts = products;
 
   grid.innerHTML = products.map((product, index) => `
     <div class="product-card" data-index="${index}" onclick="openModal(${index})">
@@ -243,11 +248,12 @@ function setupFilters() {
 
 // Open product modal
 function openModal(index) {
-  const product = allProducts[index];
+  // ใช้ displayedProducts แทน allProducts เพื่อให้ได้สินค้าที่ถูกต้อง
+  const product = displayedProducts[index];
   const modal = document.getElementById('product-modal');
 
   // Set modal content
-  document.getElementById('modal-image').src = product.Img || 'product/Body oli.png';
+  document.getElementById('modal-image').src = product.Img || 'product/BODY OIL MIST.png';
   document.getElementById('modal-image').alt = product.รายการสินค้า;
   document.getElementById('modal-title').textContent = product.รายการสินค้า;
   document.getElementById('modal-category').textContent = product.หมวดหมู่;

@@ -14,6 +14,14 @@
 
 .navbar-product .brand {
   color: #687875;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-product .brand:hover {
+  color: #4a5a5a;
+  transform: scale(1.02);
 }
 
 .navbar-product .nav-toggle {
