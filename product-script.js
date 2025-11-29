@@ -45,7 +45,7 @@ const fallbackProducts = [
   {
     "หมวดหมู่":"ATMOSPHERE",
     "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
+    "รายการสินค้า":"FROST HOME DIFFUSER",
     "กลิ่น":"HIDDEN GRACE",
     "สี":"White",
     "ขนาด":"100 ml",
@@ -98,7 +98,7 @@ const fallbackProducts = [
   },
   {
     "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PERFUME",
+    "ประเภท":"INTERIOR PARFUM",
     "รายการสินค้า":"SCENT VEIL - HIDDEN GRACE",
     "กลิ่น":"HIDDEN GRACE",
     "สี":null,
@@ -107,7 +107,7 @@ const fallbackProducts = [
   },
   {
     "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PERFUME",
+    "ประเภท":"INTERIOR PARFUM",
     "รายการสินค้า":"SCENT VEIL - TRACE OF SERENITY",
     "กลิ่น":"TRACE OF SERENITY",
     "สี":null,
@@ -116,7 +116,7 @@ const fallbackProducts = [
   },
   {
     "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PERFUME",
+    "ประเภท":"INTERIOR PARFUM",
     "รายการสินค้า":"SCENT VEIL - TIME'S EMBRACE",
     "กลิ่น":"TIME'S EMBRACE",
     "สี":null,
@@ -185,21 +185,21 @@ function displayProducts(products) {
   grid.innerHTML = products.map((product, index) => `
     <div class="product-card" data-index="${index}" onclick="openModal(${index})">
       <div class="product-card-image">
+        <p class="product-sale">Sold out</p>
         <img src="${product.Img || 'product/BODY OIL MIST.png'}"
              alt="${product.รายการสินค้า}"
              onerror="this.src='product/BODY OIL MIST.png'">
       </div>
       <div class="product-card-content">
         <h3 class="product-card-title">${product.รายการสินค้า}</h3>
-        <div class="product-card-info">
-          <span class="product-badge">${product.ประเภท}</span>
-          <span class="product-badge">${product.ขนาด}</span>
-        </div>
+        <h3 class="product-card-title">${product.กลิ่น}</h3>
         <p class="product-card-scent">
-          <strong>Scent:</strong> ${product.กลิ่น}
-          ${product.สี ? `<br><strong>Color:</strong> ${product.สี}` : ''}
+          1,000 THB
         </p>
       </div>
+
+
+
     </div>
   `).join('');
 }
@@ -304,11 +304,11 @@ function getProductImage(product) {
   // Map product types to image files
   const imageMap = {
     'BODY OIL MIST': 'product/BODY OIL MIST.png',
-    'HAND SERUM': 'product/BODY OIL MIST.png',
+    'HAND SERUM': 'product/ADVANCED HYDRATING & REVITALISING HAND SERUM.png',
     'HOME DIFFUSER': product.สี === 'Black' ?
       'product/Home Diffuser (Black).png' :
       'product/Home Diffuser (W).png',
-    'INTERIOR PERFUME': {
+    'INTERIOR PARFUM': {
       'HIDDEN GRACE': 'product/SCENT VEIL - HIDDEN GRACE.png',
       'TRACE OF SERENITY': 'product/SCENT VEIL - TRACE OF SERENITY.png',
       "TIME'S EMBRACE": "product/SCENT VEIL - TIME'S EMBRACE.png"
