@@ -236,3 +236,36 @@ if (contactForm) {
     }, 1500);
   });
 }
+
+// --- Floating Contact Button ---
+const floatingContact = document.querySelector('.floating-contact');
+const contactToggle = document.querySelector('.contact-toggle');
+
+if (contactToggle && floatingContact) {
+  // Toggle menu on click
+  contactToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    floatingContact.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.floating-contact')) {
+      floatingContact.classList.remove('active');
+    }
+  });
+
+  // Prevent closing when clicking inside the menu
+  floatingContact.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // Close menu when clicking on a contact link (optional)
+  document.querySelectorAll('.contact-item').forEach(item => {
+    item.addEventListener('click', function() {
+      setTimeout(() => {
+        floatingContact.classList.remove('active');
+      }, 300);
+    });
+  });
+}

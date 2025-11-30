@@ -6,141 +6,267 @@ let currentType = 'all';
 
 // Fallback product data (embedded in case JSON fetch fails)
 const fallbackProducts = [
+  
   {
-    "หมวดหมู่":"SKINCARE",
-    "ประเภท":"BODY OIL MIST",
-    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING BODY OIL MIST - VELA SCENT",
-    "กลิ่น":"VELA SCENT",
-    "สี":null,
-    "ขนาด":"60 ml",
-    "Img":"product/BODY OIL MIST.png"
+    "หมวดหมู่": "SKINCARE",
+    "ประเภท": "BODY OIL MIST",
+    "รายการสินค้า": "ADVANCED HYDRATING & REVITALISING BODY OIL MIST",
+    "กลิ่น": "VELA SCENT",
+    "สี": null,
+    "ขนาด": "60 ml",
+    "ราคา": "990",
+    "Img": "product/BODY OIL MIST.png",
+    "SHORT DESCRIPTION": "",
+    "DESCRIPTION": "The Body Oil Mist swiftly absorbs for long-lasting hydration with light weight and non-greasy finish. It leaves the skin smooth and supple, glow, and wrapped in fresh aroma of sensual aromas. A nourishing blend of jojoba oil, sunflower seed oil, grape seed oil, sesame oil, and shea oil, along with coffee root oil that are rich in vitamin E, omega-6, omega-9, and antioxidants deeply revitalise the skin whilst the bisabolol from Candeia-tree can help soothe the sensitive skin.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"SKINCARE",
-    "ประเภท":"BODY OIL MIST",
-    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING BODY OIL MIST - MAYA SCENT",
-    "กลิ่น":"MAYA SCENT",
-    "สี":null,
-    "ขนาด":"60 ml",
-    "Img":"product/BODY OIL MIST.png"
+    "หมวดหมู่": "SKINCARE",
+    "ประเภท": "BODY OIL MIST",
+    "รายการสินค้า": "ADVANCED HYDRATING & REVITALISING BODY OIL MIST",
+    "กลิ่น": "MAYA SCENT",
+    "สี": null,
+    "ขนาด": "60 ml",
+    "ราคา": "990",
+    "Img": "product/BODY OIL MIST.png",
+    "SHORT DESCRIPTION": "",
+    "DESCRIPTION": "The Body Oil Mist swiftly absorbs for long-lasting hydration with light weight and non-greasy finish. It leaves the skin smooth and supple, glow, and wrapped in fresh aroma of sensual aromas. A nourishing blend of jojoba oil, sunflower seed oil, grape seed oil, sesame oil, and shea oil, along with coffee root oil that are rich in vitamin E, omega-6, omega-9, and antioxidants deeply revitalise the skin whilst the bisabolol from Candeia-tree can help soothe the sensitive skin.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"SKINCARE",
-    "ประเภท":"HAND SERUM",
-    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING HAND SERUM - VELA SCENT",
-    "กลิ่น":"VELA SCENT",
-    "สี":null,
-    "ขนาด":"55 g",
-    "Img":"product/BODY OIL MIST.png"
+    "หมวดหมู่": "SKINCARE",
+    "ประเภท": "HAND SERUM",
+    "รายการสินค้า": "ADVANCED HYDRATING & REVITALISING HAND SERUM",
+    "กลิ่น": "VELA SCENT",
+    "สี": null,
+    "ขนาด": "55 g",
+    "ราคา": "1,290",
+    "Img": "product/BODY OIL MIST.png",
+    "SHORT DESCRIPTION": "",
+    "DESCRIPTION": "Indulge your skin with a unique blend of fast-absorbing and moisturising concentrated essence (three essential Ceramides, 3% Urea, Vitamin B3 and Provitamin B5), as well as revitalising extracts from antioxidant-rich coffee root and sacred lotus stamen. It helps restore dry and rough skin, nourishes and strengthens the skin’s natural moisture barrier, and enhances skin radiance and smoothness.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"SKINCARE",
-    "ประเภท":"HAND SERUM",
-    "รายการสินค้า":"ADVANCED HYDRATING & REVITALISING HAND SERUM - MAYA SCENT",
-    "กลิ่น":"MAYA SCENT",
-    "สี":null,
-    "ขนาด":"55 g",
-    "Img":"product/BODY OIL MIST.png"
+    "หมวดหมู่": "SKINCARE",
+    "ประเภท": "HAND SERUM",
+    "รายการสินค้า": "ADVANCED HYDRATING & REVITALISING HAND SERUM",
+    "กลิ่น": "MAYA SCENT",
+    "สี": null,
+    "ขนาด": "55 g",
+    "ราคา": "1,290",
+    "Img": "product/BODY OIL MIST.png",
+    "SHORT DESCRIPTION": "",
+    "DESCRIPTION": "Indulge your skin with a unique blend of fast-absorbing and moisturising concentrated essence (three essential Ceramides, 3% Urea, Vitamin B3 and Provitamin B5), as well as revitalising extracts from antioxidant-rich coffee root and sacred lotus stamen. It helps restore dry and rough skin, nourishes and strengthens the skin’s natural moisture barrier, and enhances skin radiance and smoothness.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"FROST HOME DIFFUSER",
-    "กลิ่น":"HIDDEN GRACE",
-    "สี":"White",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (W).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "FROST HOME DIFFUSER",
+    "กลิ่น": "TIME'S EMBRACE",
+    "สี": "FROST",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (W).png",
+    "SHORT DESCRIPTION": "ELEVATE YOUR CONCENTRATION",
+    "DESCRIPTION": "Boost concentration and help you stay in the present moment. This exclusive blend sharpens focus, enhances mindfulness, and sparks positivity — creating a harmonious space where tranquility meets energy.",
+    "DIRECTION": "Place the reed.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
+    "สถานะ": "Sold out"
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
-    "กลิ่น":"TRACE OF SERENITY",
-    "สี":"White",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (W).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "FROST HOME DIFFUSER",
+    "กลิ่น": "HIDDEN GRACE",
+    "สี": "FROST",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (W).png",
+    "SHORT DESCRIPTION": "TURN ANXIETY INTO HARMONY",
+    "DESCRIPTION": "Immerse in a balanced atmosphere of clarity calm, and renewed vitality. This revitalising blend sharpens memory and sparks motivation — helping you feel alert and inspired whilst promoting deep relaxation and restful sleep.",
+    "DIRECTION": "Place the reed.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
+    "สถานะ": "Sold out"
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - TIME'S EMBRACE",
-    "กลิ่น":"TIME'S EMBRACE",
-    "สี":"White",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (W).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "FROST HOME DIFFUSER",
+    "กลิ่น": "TRACE OF SERENITY",
+    "สี": "FROST",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (W).png",
+    "SHORT DESCRIPTION": "DISCOVER YOUR INNER PEACE",
+    "DESCRIPTION": "Create balance and a clear atmosphere of mindfulness, relaxation, and quiet strength. This exquisite blend gently relieves stress and anxiety, replacing tension with a serene sense of calm and renewed energy.",
+    "DIRECTION": "Place the reed.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
+    "สถานะ": "Sold out"
+  },
+
+    {
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "MIDNIGHT HOME DIFFUSER",
+    "กลิ่น": "TIME'S EMBRACE",
+    "สี": "MIDNIGHT",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (Black).png",
+    "SHORT DESCRIPTION": "ELEVATE YOUR CONCENTRATION",
+    "DESCRIPTION": "Boost concentration and help you stay in the present moment. This exclusive blend sharpens focus, enhances mindfulness, and sparks positivity — creating a harmonious space where tranquility meets energy.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": "Sold out"
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - HIDDEN GRACE",
-    "กลิ่น":"HIDDEN GRACE",
-    "สี":"Black",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (Black).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "MIDNIGHT HOME DIFFUSER",
+    "กลิ่น": "HIDDEN GRACE",
+    "สี": "MIDNIGHT",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (Black).png",
+    "SHORT DESCRIPTION": "TURN ANXIETY INTO HARMONY",
+    "DESCRIPTION": "Immerse in a balanced atmosphere of clarity calm, and renewed vitality. This revitalising blend sharpens memory and sparks motivation — helping you feel alert and inspired whilst promoting deep relaxation and restful sleep.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": "Sold out"
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - TRACE OF SERENITY",
-    "กลิ่น":"TRACE OF SERENITY",
-    "สี":"Black",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (Black).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "HOME DIFFUSER",
+    "รายการสินค้า": "MIDNIGHT HOME DIFFUSER",
+    "กลิ่น": "TRACE OF SERENITY",
+    "สี": "MIDNIGHT",
+    "ขนาด": "80 ml",
+    "ราคา": "1,590",
+    "Img": "product/Home Diffuser (Black).png",
+    "SHORT DESCRIPTION": "DISCOVER YOUR INNER PEACE",
+    "DESCRIPTION": "Create balance and a clear atmosphere of mindfulness, relaxation, and quiet strength. This exquisite blend gently relieves stress and anxiety, replacing tension with a serene sense of calm and renewed energy.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": "Sold out"
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"HOME DIFFUSER",
-    "รายการสินค้า":"HOME DIFFUSER - TIME'S EMBRACE",
-    "กลิ่น":"TIME'S EMBRACE",
-    "สี":"Black",
-    "ขนาด":"100 ml",
-    "Img":"product/Home Diffuser (Black).png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "INTERIOR PARFUM",
+    "รายการสินค้า": "INTERIOR PARFUM",
+    "กลิ่น": "HIDDEN GRACE",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "390",
+    "Img": "product/INTERIOR PARFUM HIDDEN GRACE.png",
+    "SHORT DESCRIPTION": "TURN ANXIETY INTO HARMONY",
+    "DESCRIPTION": "Immerse in a balanced atmosphere of clarity calm, and renewed vitality. This revitalising blend sharpens memory and sparks motivation — helping you feel alert and inspired whilst promoting deep relaxation and restful sleep.",
+    "DIRECTION": "Hold the bottle.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PARFUM",
-    "รายการสินค้า":"SCENT VEIL - HIDDEN GRACE",
-    "กลิ่น":"HIDDEN GRACE",
-    "สี":null,
-    "ขนาด":"10 ml",
-    "Img":"product/SCENT VEIL - HIDDEN GRACE.png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "INTERIOR PARFUM",
+    "รายการสินค้า": "INTERIOR PARFUM",
+    "กลิ่น": "TRACE OF SERENITY",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "390",
+    "Img": "product/INTERIOR PARFUM TRACE OF SERENITY.png",
+    "SHORT DESCRIPTION": "DISCOVER YOUR INNER PEACE",
+    "DESCRIPTION": "Create balance and a clear atmosphere of mindfulness, relaxation, and quiet strength. This exquisite blend gently relieves stress and anxiety, replacing tension with a serene sense of calm and renewed energy.",
+    "DIRECTION": "Hold the bottle.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PARFUM",
-    "รายการสินค้า":"SCENT VEIL - TRACE OF SERENITY",
-    "กลิ่น":"TRACE OF SERENITY",
-    "สี":null,
-    "ขนาด":"10 ml",
-    "Img":"product/SCENT VEIL - TRACE OF SERENITY.png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "INTERIOR PARFUM",
+    "รายการสินค้า": "INTERIOR PARFUM",
+    "กลิ่น": "TIME'S EMBRACE",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "390",
+    "Img": "product/INTERIOR PARFUM TIME'S EMBRACE.png",
+    "SHORT DESCRIPTION": "ELEVATE YOUR CONCENTRATION",
+    "DESCRIPTION": "Boost concentration and help you stay in the present moment. This exclusive blend sharpens focus, enhances mindfulness, and sparks positivity — creating a harmonious space where tranquility meets energy.",
+    "DIRECTION": "Hold the bottle.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
+    "สถานะ": ""
+  },
+
+  {
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "INTERIOR PARFUM",
+    "รายการสินค้า": "INTERIOR PARFUM",
+    "กลิ่น": "SERENE NIGHTFALL",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "490",
+    "Img": "product/INTERIOR PARFUM SERENE NIGHTFALL.png",
+    "SHORT DESCRIPTION": "DEEP CALM & RESTORATIVE SLEEP",
+    "DESCRIPTION": "Indulge in the exquisite serenity of deep calm and emotional balance as your body is cradled into an effortless, ready state of profound rest.",
+    "DIRECTION": "Hold the bottle.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"INTERIOR PARFUM",
-    "รายการสินค้า":"SCENT VEIL - TIME'S EMBRACE",
-    "กลิ่น":"TIME'S EMBRACE",
-    "สี":null,
-    "ขนาด":"10 ml",
-    "Img":"product/SCENT VEIL - TIME'S EMBRACE.png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "INTERIOR PARFUM",
+    "รายการสินค้า": "INTERIOR PARFUM",
+    "กลิ่น": "RESPIRE QUIETUDE",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "490",
+    "Img": "product/INTERIOR PARFUM RESPIRE QUIETUDE.png",
+    "SHORT DESCRIPTION": "WELLNESS IN EVERY BREATH",
+    "DESCRIPTION": "Elevate your senses and transform every breath into a moment of clarity and serenity with clear breath,calm mind, and strengthened immunity.",
+    "DIRECTION": "Hold the bottle.",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
+    "สถานะ": ""
+  },
+
+  {
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "100% ESSENTIAL OIL",
+    "รายการสินค้า": "100% ESSENTIAL OIL",
+    "กลิ่น": "SERENE NIGHTFALL",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "590",
+    "Img": "product/SERENE NIGHTFALL.png",
+    "SHORT DESCRIPTION": "DEEP CALM & RESTORATIVE SLEEP",
+    "DESCRIPTION": "Indulge in the exquisite serenity of deep calm and emotional balance as your body is cradled into an effortless, ready state of profound rest.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   },
   {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"ESSENTIAL OIL",
-    "รายการสินค้า":"ESSENTIAL OIL - SERENE NIGHTFALL",
-    "กลิ่น":"SERENE NIGHTFALL",
-    "สี":null,
-    "ขนาด":"10 ml",
-    "Img":"product/SERENE NIGHTFALL.png"
-  },
-  {
-    "หมวดหมู่":"ATMOSPHERE",
-    "ประเภท":"ESSENTIAL OIL",
-    "รายการสินค้า":"ESSENTIAL OIL - RESPIRE QUIETUDE",
-    "กลิ่น":"RESPIRE QUIETUDE",
-    "สี":null,
-    "ขนาด":"10 ml",
-    "Img":"product/RESPIRE QUIETUDE.png"
+    "หมวดหมู่": "ATMOSPHERE",
+    "ประเภท": "100% ESSENTIAL OIL",
+    "รายการสินค้า": "100% ESSENTIAL OIL",
+    "กลิ่น": "RESPIRE QUIETUDE",
+    "สี": null,
+    "ขนาด": "10 ml",
+    "ราคา": "590",
+    "Img": "product/RESPIRE QUIETUDE.png",
+    "SHORT DESCRIPTION": "WELLNESS IN EVERY BREATH",
+    "DESCRIPTION": "Elevate your senses and transform every breath into a moment of clarity and serenity with clear breath,calm mind, and strengthened immunity.",
+    "DIRECTION": "",
+    "INGREDIENTS": "",
+    "สถานะ": ""
   }
+
+
 ];
 
 // Load products from JSON
@@ -185,21 +311,18 @@ function displayProducts(products) {
   grid.innerHTML = products.map((product, index) => `
     <div class="product-card" data-index="${index}" onclick="openModal(${index})">
       <div class="product-card-image">
-        <p class="product-sale">Sold out</p>
+        <p class="product-sale">${product.สถานะ}</p>
         <img src="${product.Img || 'product/BODY OIL MIST.png'}"
              alt="${product.รายการสินค้า}"
              onerror="this.src='product/BODY OIL MIST.png'">
       </div>
       <div class="product-card-content">
         <h3 class="product-card-title">${product.รายการสินค้า}</h3>
-        <h3 class="product-card-title">${product.กลิ่น}</h3>
+        <h3 class="product-card-sub-title">${product.กลิ่น}</h3>
         <p class="product-card-scent">
-          1,000 THB
+          ${product.ราคา} THB
         </p>
       </div>
-
-
-
     </div>
   `).join('');
 }
@@ -260,6 +383,7 @@ function openModal(index) {
   document.getElementById('modal-type').textContent = product.ประเภท;
   document.getElementById('modal-scent').textContent = product.กลิ่น;
   document.getElementById('modal-size').textContent = product.ขนาด;
+  document.getElementById('modal-price').textContent = product.ราคา + ' THB';
 
   // Handle color (optional field)
   const colorContainer = document.getElementById('modal-color-container');
@@ -268,6 +392,15 @@ function openModal(index) {
     document.getElementById('modal-color').textContent = product.สี;
   } else {
     colorContainer.style.display = 'none';
+  }
+
+  // Set description from product data
+  const descriptionElement = document.getElementById('modal-description');
+  if (product.DESCRIPTION && product.DESCRIPTION.trim() !== '') {
+    descriptionElement.textContent = product.DESCRIPTION;
+  } else {
+    // Default fallback text if no description
+    descriptionElement.textContent = 'Experience the essence of luxury with our carefully crafted formulation. Each product is designed to provide a holistic wellbeing experience that combines safe dermatological care with sophisticated scents.';
   }
 
   // Show modal
@@ -305,7 +438,7 @@ function getProductImage(product) {
   const imageMap = {
     'BODY OIL MIST': 'product/BODY OIL MIST.png',
     'HAND SERUM': 'product/ADVANCED HYDRATING & REVITALISING HAND SERUM.png',
-    'HOME DIFFUSER': product.สี === 'Black' ?
+    'HOME DIFFUSER': product.สี === 'MIDNIGHT' ?
       'product/Home Diffuser (Black).png' :
       'product/Home Diffuser (W).png',
     'INTERIOR PARFUM': {
@@ -313,7 +446,7 @@ function getProductImage(product) {
       'TRACE OF SERENITY': 'product/SCENT VEIL - TRACE OF SERENITY.png',
       "TIME'S EMBRACE": "product/SCENT VEIL - TIME'S EMBRACE.png"
     },
-    'ESSENTIAL OIL': {
+    '100% ESSENTIAL OIL': {
       'SERENE NIGHTFALL': 'product/SERENE NIGHTFALL.png',
       'RESPIRE QUIETUDE': 'product/RESPIRE QUIETUDE.png'
     },

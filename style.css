@@ -2239,3 +2239,196 @@ font-family: "Cinzel", serif;
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Floating Contact Button */
+.floating-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #687875 0%, #4a5a5a 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(104, 120, 117, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.contact-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(104, 120, 117, 0.45);
+}
+
+.contact-toggle:active {
+  transform: scale(0.95);
+}
+
+.contact-toggle svg {
+  color: #ffffff;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.contact-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.contact-close {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.floating-contact.active .contact-icon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.floating-contact.active .contact-close {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.contact-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.floating-contact.active .contact-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* padding: 12px 20px; */
+  border-radius: 50%;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Faber Sans Pro Reduced", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInContact 0.4s ease forwards;
+  height: 60px;
+  width: 60px;
+  justify-content: space-evenly;
+}
+
+.contact-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.contact-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes slideInContact {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-line {
+  background: linear-gradient(135deg, #687875 0%, #4a5a5a 100%)
+  /* linear-gradient(135deg, #06C755 0%, #00B140 100%); */
+}
+
+.contact-line:hover {
+  background: linear-gradient(135deg, #00B140 0%, #009E35 100%);
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(6, 199, 85, 0.4);
+}
+
+.contact-facebook {
+  background:linear-gradient(135deg, #687875 0%, #4a5a5a 100%)
+   /* linear-gradient(135deg, #1877F2 0%, #0C63D4 100%); */
+}
+
+.contact-facebook:hover {
+  background: linear-gradient(135deg, #0C63D4 0%, #0952B8 100%);
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(24, 119, 242, 0.4);
+}
+
+.contact-instagram {
+  background: linear-gradient(135deg, #687875 0%, #4a5a5a 100%)
+  /* linear-gradient(135deg, #E4405F 0%, #C13584 50%, #833AB4 100%); */
+}
+
+.contact-instagram:hover {
+  background: linear-gradient(135deg, #C13584 0%, #833AB4 50%, #5B51D8 100%);
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(228, 64, 95, 0.4);
+}
+
+.contact-item svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .floating-contact {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .contact-toggle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contact-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+/* 
+  .contact-item {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    gap: 10px;
+  } */
+
+  .contact-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-item span {
+    font-size: 0.85rem;
+  }
+}
