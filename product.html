@@ -121,33 +121,80 @@
             <img src="" alt="" id="modal-image" />
           </div>
           <div class="modal-details">
-            <h2 id="modal-title"></h2>
-            <div class="modal-info">
-              <div class="info-badge" id="modal-category"></div>
-              <div class="info-badge" id="modal-type"></div>
+            <div id="modal-scent"></div>
+            <div id="modal-type"></div>
+            <div id="modal-size"></div>
+            <div id="modal-price"></div>
+            <div id="modal-sub-description"></div>
+            <div id="modal-description"></div>
+            
+
+            <!-- Accordion Sections -->
+            <div class="modal-accordion">
+              <div class="accordion-item" id="description-accordion">
+                <button class="accordion-header" onclick="toggleAccordion('description')">
+                  <span>SCENT</span>
+                  <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-content">
+                  <p id="modal-description"></p>
+                  <!-- Scent Profile Section -->
+                  <div class="scent-profile-section" id="scent-profile-section" style="display: none;">
+                    <p class="scent-profile-description">
+                      <span class="scent-profile-title" id="modal-scent-title-profile"></span>
+                      <span id="modal-scent-profile"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" id="direction-accordion">
+                <button class="accordion-header" onclick="toggleAccordion('direction')">
+                  <span>DIRECTION</span>
+                  <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-content">
+                  <p id="modal-direction"></p>
+                </div>
+              </div>
+<!-- Ingredients Accordion -->
+              <div class="accordion-item" id="ingredients-accordion">
+                <button class="accordion-header" onclick="toggleAccordion('ingredients')">
+                  <span>INGREDIENTS</span>
+                  <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-content">
+                  <p id="modal-ingredients"></p>
+                </div>
+              </div>
+
+              <!-- Caution Accordion -->
+              <div class="accordion-item" id="caution-accordion">
+                <button class="accordion-header" onclick="toggleAccordion('caution')">
+                  <span>CAUTION</span>
+                  <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-content">
+                  <p id="modal-caution"></p>
+                </div>
+              </div>
+
+
             </div>
-            <div class="modal-specs">
-              <div class="spec-item">
-                <span class="spec-label">Scent:</span>
-                <span class="spec-value" id="modal-scent"></span>
-              </div>
-              <div class="spec-item" id="modal-color-container">
-                <span class="spec-label">Color :</span>
-                <span class="spec-value" id="modal-color"></span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Size :</span>
-                <span class="spec-value" id="modal-size"></span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Price :</span>
-                <span class="spec-value" id="modal-price"></span>
-              </div>
-            </div>
-            <div class="modal-description">
-              <p id="modal-description"></p>
-            </div>
-            <button class="buy-button modal-buy-btn">Add to Cart</button>
+
+              
+
+            <a href="https://line.me/R/ti/p/@044jetxc" target="_blank">
+              <button class="buy-button modal-buy-btn">Place Order via Line</button>
+            </a>
+            <!-- <button class="buy-button modal-buy-btn">Place Order via Line</button> -->
           </div>
         </div>
       </div>
@@ -163,21 +210,21 @@
         <a href="index.html#journey">About Us</a>
       </div>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=61567373314279&mibextid=wwXIfr&rdid=bbq9Jpdi8uNLbil6&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GCbVAVVsz%2F%3Fmibextid%3DwwXIfr#" aria-label="Facebook">
           <img
             src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
             alt="Facebook"
             width="24"
           />
         </a>
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/vijitrofficial?igsh=MWc0c2l3Mm5tNHUxOA%3D%3D" aria-label="Instagram">
           <img
             src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
             alt="Instagram"
             width="24"
           />
         </a>
-        <a href="#" aria-label="Line">
+        <a href="https://line.me/R/ti/p/@044jetxc" aria-label="Line">
           <img
             src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/line.svg"
             alt="Line"

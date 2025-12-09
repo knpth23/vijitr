@@ -269,3 +269,29 @@ if (contactToggle && floatingContact) {
     });
   });
 }
+
+// Journey Overlay Fade-in Animation
+const journeyOverlay = document.querySelector('.journey-section .journey-overlay');
+
+if (journeyOverlay) {
+  // Create Intersection Observer
+  const observerOptions = {
+    root: null,
+    threshold: 0.3, // Trigger when 30% of element is visible
+    rootMargin: '0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        journeyOverlay.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe the journey section
+  const journeySection = document.querySelector('.journey-section');
+  if (journeySection) {
+    observer.observe(journeySection);
+  }
+}

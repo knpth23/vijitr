@@ -13,7 +13,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Quicksand:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,200;1,200&family=Quicksand:wght@300&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -946,6 +946,12 @@ font-family: "Cinzel", serif;
   transform: translate(-50%, -50%);
   /* background: rgba(0, 0, 0, 0.3); */
   border-radius: 16px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.journey-overlay.visible {
+  opacity: 1;
 }
 
 .journey-overlay .journey-header h2 {
@@ -1151,7 +1157,7 @@ font-family: "Cinzel", serif;
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 15px 0px;
   }
 
   .navbar-header {
@@ -1161,7 +1167,7 @@ font-family: "Cinzel", serif;
   .nav-toggle {
     display: block;
     position: absolute;
-    left: 0;
+    left: 20px;
   }
 
   .nav-menu {
@@ -1831,7 +1837,7 @@ font-family: "Cinzel", serif;
 
   .journey-overlay {
     padding: 40px 20px;
-    width:66%;
+    width:60%;
   }
 
   .journey-overlay .journey-header h2 {
@@ -1844,7 +1850,7 @@ font-family: "Cinzel", serif;
   }
 
   .journey-content-new p {
-    text-align: left;
+    text-align: center;
   }
 
   .channel-card {

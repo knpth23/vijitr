@@ -1,4 +1,5 @@
 /* Product Page Specific Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,200;1,200&family=Quicksand:wght@300&display=swap');
 
 .product-main {
   padding-top: 0;
@@ -85,7 +86,7 @@
 }
 
 .hero-title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   font-weight: 200;
   color: #ffffff;
@@ -95,11 +96,18 @@
 }
 
 .hero-subtitle {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 200;
   letter-spacing: 1px;
+}
+
+.accordion-header span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #000000;
+    font-size: 0.8rem;
 }
 
 /* Filter Section */
@@ -126,7 +134,7 @@
 }
 
 .filter-btn {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 12px 28px;
   border: 2px solid rgba(104, 120, 117, 0.3);
   background: #fff;
@@ -205,7 +213,7 @@
 }
 
 p.product-sale {
-  font-family: "quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-left: 20px;
   position: absolute;
   padding-top: 10px;
@@ -219,7 +227,7 @@ p.product-sale {
 }
 
 .product-card-title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
   font-weight: 300;
   color: #2c2c2c;
@@ -237,7 +245,7 @@ p.product-sale {
 
 
 .product-card-sub-title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
   font-weight: 300;
   color: #757575;
@@ -260,7 +268,7 @@ p.product-sale {
 }
 
 .product-badge {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85rem;
   padding: 6px 14px;
   background: rgba(104, 120, 117, 0.15);
@@ -271,7 +279,7 @@ p.product-sale {
 }
 
 .product-card-scent {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
   color: #2c2c2c;
   margin-top: 8px;
@@ -381,10 +389,10 @@ p.product-sale {
   justify-content: center;
 }
 
-.modal-details h2 {
-  font-family: "Quicksand", sans-serif;
+.modal-details {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 800;
   color: #2c2c2c;
   margin-bottom: 20px;
   line-height: 1.4;
@@ -400,7 +408,7 @@ p.product-sale {
 }
 
 .info-badge {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   padding: 8px 18px;
   background: rgba(104, 120, 117, 0.15);
@@ -411,10 +419,10 @@ p.product-sale {
 }
 
 .modal-specs {
-  background: rgba(104, 120, 117, 0.05);
+  /* background: rgba(104, 120, 117, 0.05); */
   border-radius: 12px;
   padding: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .spec-item {
@@ -422,7 +430,7 @@ p.product-sale {
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(104, 120, 117, 0.1);
+  /* border-bottom: 1px solid rgba(104, 120, 117, 0.1); */
 }
 
 .spec-item:last-child {
@@ -430,29 +438,139 @@ p.product-sale {
 }
 
 .spec-label {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #687875;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
 .spec-value {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #2c2c2c;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  white-space: pre-line;
+  line-height: 1.8;
 }
 
-.modal-description {
-  margin-bottom: 28px;
+/* Scent Profile Section */
+.scent-profile-section {
+  /* background: linear-gradient(135deg, rgba(104, 120, 117, 0.08) 0%, rgba(104, 120, 117, 0.15) 100%);
+  border-radius: 16px;
+  padding: 24px; */
+  margin-bottom: 14px;
+  /* text-align: center;
+  border: 2px solid rgba(104, 120, 117, 0.2); */
 }
 
-.modal-description p {
-  font-family: "Quicksand", sans-serif;
-  font-size: 0.95rem;
+#modal-scent-profile {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+
+.scent-profile-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  /* color: #687875; */
+  /* margin: 0 0 12px 0; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 1.5px; */
+}
+
+.scent-profile-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  white-space: pre-line;
+}
+
+/* Make specific keywords bold in scent profile section */
+.scent-profile-section strong {
+  font-weight: 700;
+}
+
+/* Accordion Styles */
+.modal-accordion {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+p#modal-direction {
+    white-space: pre-line;
+}
+
+p#modal-caution {
+    white-space: pre-line;
+}
+
+.accordion-item {
+  /* border: 1px solid rgba(104, 120, 117, 0.15); */
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #687875;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* .accordion-header:hover {
+  background: rgb(255, 255, 255);
+} */
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  color: #687875;
+  flex-shrink: 0;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 20px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 20px;
+} 
+
+.accordion-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  /* font-weight: 200; */
   color: #555;
   line-height: 1.8;
-  /* text-align: justify; */
+  margin: 0;
+  text-align: left;
+  display: grid;
 }
 
 .modal-buy-btn {
@@ -465,7 +583,7 @@ p.product-sale {
 .loading {
   text-align: center;
   padding: 60px 20px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   color: #687875;
 }
@@ -484,7 +602,7 @@ p.product-sale {
 }
 
 .empty-state-title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   color: #687875;
   margin-bottom: 12px;
@@ -492,7 +610,7 @@ p.product-sale {
 }
 
 .empty-state-text {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: #999;
   font-weight: 300;
@@ -538,10 +656,61 @@ p.product-sale {
     padding: 30px;
   }
 
-  .modal-details h2 {
+  /* .modal-details h2 {
     font-size: 1.2rem;
+  } */
+
+  #modal-scent{ 
+    font-size: 1.2rem;
+    letter-spacing: 2px;
   }
 
+  #modal-type{ 
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #4a5a5a7d;
+  }
+  
+  #modal-size{ 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    /* color: #4a5a5a7d; */
+  }
+
+  #modal-price{ 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 200; */
+    font-style: normal;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    /* color: #4a5a5a7d; */
+  }
+  #modal-sub-description{ 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin-top: 20px;
+    font-size: 1.0rem;
+    /* letter-spacing: 1px; */
+    color: #000000;
+  }
+
+  #modal-description{ 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.0rem;
+    /* letter-spacing: 1px; */
+    color: #000000;
+  }
+  
   .modal-buy-btn {
     width: 100%;
   }
@@ -575,6 +744,8 @@ p.product-sale {
     min-width: 120px;
   }
 }
+
+
 
 /* Staggered Animation for Product Cards */
 .product-card:nth-child(1) { animation-delay: 0.05s; }
