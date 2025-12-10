@@ -974,7 +974,7 @@ font-family: "Cinzel", serif;
 
 .journey-content-new p {
   margin-bottom: 28px;
-  text-align: justify;
+  text-align: center;
 }
 
 .journey-content-new p:last-child {

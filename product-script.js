@@ -58,7 +58,7 @@ const fallbackProducts = [
     "DESCRIPTION": "Indulge your skin with a unique blend of fast-absorbing and moisturising concentrated essence (three essential Ceramides, 5% Urea, Vitamin B3 and Provitamin B5), as well as revitalising extracts from antioxidant-rich licorice root and sacred lotus stamen. It helps restore dry and rough skin, nourishes and strengthens the skin’s natural moisture barrier, and enhances skin radiance and smoothness.",
     "DIRECTION": "Gently apply serum over your natural and massage until absorbed. It can be used as often as needed.",
     "INGREDIENTS": "Aqua (Water), Urea, Glyceryl Stearate, Butylene Glycol, Parfum (Fragrance), Cetyl Alcohol, Niacinamide, Petrolatum, Isopropyl Palmitate, PEG-100 Stearate, Dimethicone, Glycerin, Sorbitan Stearate, Polysorbate 60, Dicaprylyl Carbonate, Phenoxyethanol, Butyrospermum Parkii (Shea) Butter, Ammonium Acryloyldimethyltaurate/VP Copolymer, Chlorphenesin, PPG-20 Methyl Glucose Ether, Benzotriazolyl Dodecyl p-Cresol, Disodium EDTA, Sodium Hyaluronate, Panthenol, Citric Acid, Sodium Lauroyl Lactylate, Xanthan Gum, Tocopheryl Acetate, Glycyrrhiza Glabra (Licorice) Root Extract, Ceramide NP, Phytosphingosine, Ceramide AP, Cholesterol, Carbomer, Ethylhexylglycerin, Nelumbo Nucifera Stamen Extract, Ceramide EOP.",
-    "CAUTION":"Keep out of light and temperature above 10°C to maintain the quality of the product.",
+    "CAUTION":"Keep out of light and temperature above 40°C to maintain the quality of the product.",
     "สถานะ": ""
   },
   {
@@ -76,7 +76,7 @@ const fallbackProducts = [
     "DESCRIPTION": "Indulge your skin with a unique blend of fast-absorbing and moisturising concentrated essence (three essential Ceramides, 5% Urea, Vitamin B3 and Provitamin B5), as well as revitalising extracts from antioxidant-rich licorice root and sacred lotus stamen. It helps restore dry and rough skin, nourishes and strengthens the skin’s natural moisture barrier, and enhances skin radiance and smoothness.",
     "DIRECTION": "Gently apply serum over your natural and massage until absorbed. It can be used as often as needed.",
     "INGREDIENTS": "Aqua (Water), Urea, Glyceryl Stearate, Butylene Glycol, Parfum (Fragrance), Cetyl Alcohol, Niacinamide, Petrolatum, Isopropyl Palmitate, PEG-100 Stearate, Dimethicone, Glycerin, Sorbitan Stearate, Polysorbate 60, Dicaprylyl Carbonate, Phenoxyethanol, Butyrospermum Parkii (Shea) Butter, Ammonium Acryloyldimethyltaurate/VP Copolymer, Chlorphenesin, PPG-20 Methyl Glucose Ether, Benzotriazolyl Dodecyl p-Cresol, Disodium EDTA, Sodium Hyaluronate, Panthenol, Citric Acid, Sodium Lauroyl Lactylate, Xanthan Gum, Tocopheryl Acetate, Glycyrrhiza Glabra (Licorice) Root Extract, Ceramide NP, Phytosphingosine, Ceramide AP, Cholesterol, Carbomer, Ethylhexylglycerin, Nelumbo Nucifera Stamen Extract, Ceramide EOP.",
-    "CAUTION":"Keep out of light and temperature above 10°C to maintain the quality of the product.",
+    "CAUTION":"Keep out of light and temperature above 40°C to maintain the quality of the product.",
     "สถานะ": ""
   },
   {
@@ -256,7 +256,7 @@ const fallbackProducts = [
     "SHORT DESCRIPTION": "DEEP CALM & RESTORATIVE SLEEP",
     "DESCRIPTION": "Indulge in the exquisite serenity of deep calm and emotional balance as your body is cradled into an effortless, ready state of profound rest.",
     "DIRECTION": "• Hold the bottle upright and spray 2–3 bursts into the air for an instant, lingering fragrance.\n • For a subtle touch, mist lightly over curtains or fabrics (test on a discreet area first).\n • Avoid direct contact with delicate surfaces.\n • Reapply as desired to maintain an atmosphere of refined serenity and timeless allure.",
-    "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
     "CAUTION":"• Do not place or store near heat, high temperature or open flames.\n• Keep out of reach of children and pets.\n• For external use only, do not ingest.\n• Handle with care, avoid contact with eyes and skin.",
     "สถานะ": ""
   },
@@ -274,7 +274,7 @@ const fallbackProducts = [
     "SHORT DESCRIPTION": "WELLNESS IN EVERY BREATH",
     "DESCRIPTION": "Elevate your senses and transform every breath into a moment of clarity and serenity with clear breath,calm mind, and strengthened immunity.",
     "DIRECTION": "• Hold the bottle upright and spray 2–3 bursts into the air for an instant, lingering fragrance.\n • For a subtle touch, mist lightly over curtains or fabrics (test on a discreet area first).\n • Avoid direct contact with delicate surfaces.\n • Reapply as desired to maintain an atmosphere of refined serenity and timeless allure.",
-    "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
+    "INGREDIENTS": "Ethyl Alcohol, Essential Oils",
     "CAUTION":"• Do not place or store near heat, high temperature or open flames.\n• Keep out of reach of children and pets.\n• For external use only, do not ingest.\n• Handle with care, avoid contact with eyes and skin.",
     "สถานะ": ""
   },
@@ -293,7 +293,7 @@ const fallbackProducts = [
     "DESCRIPTION": "Indulge in the exquisite serenity of deep calm and emotional balance as your body is cradled into an effortless, ready state of profound rest.",
     "DIRECTION": "Add a few drops of essential oil to a burner or diffuser filled half-way with water.",
     "INGREDIENTS": "Sweet Orange, Neroli, Peppermint, Ylang Ylang, Lavender, Rose Geranium, Vetiver, Clary Sage, and Guaiac Wood.",
-    "CAUTION":"",
+    "CAUTION":"• Do not place or store near heat, high temperature or open flames.\n• Keep out of reach of children and pets.\n• For external use only, do not ingest.\n• Handle with care, avoid contact with eyes and skin.",
     "สถานะ": ""
   },
   {
@@ -592,9 +592,8 @@ function setupModal() {
   });
 }
 
-// Get image path helper
+
 function getProductImage(product) {
-  // Map product types to image files
   const imageMap = {
     'BODY OIL MIST': 'product/BODY OIL MIST.png',
     'HAND SERUM': 'product/ADVANCED HYDRATING & REVITALISING HAND SERUM.png',
@@ -605,14 +604,6 @@ function getProductImage(product) {
       'HIDDEN GRACE': 'product/INTERIOR PARFUM HIDDEN GRACE.png',
       'TRACE OF SERENITY': 'product/INTERIOR PARFUM TRACE OF SERENITY.png',
       "TIME'S EMBRACE": "product/INTERIOR PARFUM TIME'S EMBRACE.png"
-    },
-    '100% ESSENTIAL OIL': {
-      'SERENE NIGHTFALL': 'product/SERENE NIGHTFALL.png',
-      'RESPIRE QUIETUDE': 'product/RESPIRE QUIETUDE.png'
-    },
-    '100% ESSENTIAL OIL': {
-      'SERENE NIGHTFALL': 'product/SERENE NIGHTFALL.png',
-      'RESPIRE QUIETUDE': 'product/RESPIRE QUIETUDE.png'
     }
   };
 
