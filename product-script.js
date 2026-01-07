@@ -23,7 +23,7 @@ const fallbackProducts = [
     "DIRECTION": "After showering, spray body oil onto damp skin and massage until absorbed.",
     "INGREDIENTS": "Isododecane, Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Parfum (Fragrance), Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Bisabolol, BHT, Tocopheryl Acetate Benzotriazolyl Dodecyl-p-Cresol, Glycyrrhiza Glabra (Licorice) Root Extract, Vitis Vinifera (Grape) Seed Oil, Sesamum Indicum (Sesame) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Tocopherol.",
     "CAUTION":"Keep it out of light and temperature above 40°C to maintain the quality of the product.",
-    "สถานะ": ""
+    "สถานะ": "Sold out"
   },
   {
     "หมวดหมู่": "SKINCARE",
@@ -41,7 +41,7 @@ const fallbackProducts = [
     "DIRECTION": "After showering, spray body oil onto damp skin and massage until absorbed.",
     "INGREDIENTS": "Isododecane, Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Parfum (Fragrance), Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Bisabolol, BHT, Tocopheryl Acetate Benzotriazolyl Dodecyl-p-Cresol, Glycyrrhiza Glabra (Licorice) Root Extract, Vitis Vinifera (Grape) Seed Oil, Sesamum Indicum (Sesame) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Tocopherol.",
     "CAUTION":"Keep it out of light and temperature above 40°C to maintain the quality of the product.",
-    "สถานะ": ""
+    "สถานะ": "Sold out"
   },
   {
     "หมวดหมู่": "SKINCARE",
@@ -222,7 +222,7 @@ const fallbackProducts = [
     "DIRECTION": "• Hold the bottle upright and spray 2–3 bursts into the air for an instant, lingering fragrance.\n• For a subtle touch, mist lightly over curtains or fabrics (test on a discreet area first).\n• Avoid direct contact with delicate surfaces.\n• Reapply as desired to maintain an atmosphere of refined serenity and timeless allure.",
     "INGREDIENTS": "Ethyl Alcohol, Essential Oils, Fragrance",
     "CAUTION":"• Do not place or store near heat, high temperature or open flames.\n• Keep out of reach of children and pets.\n• For external use only, do not ingest.\n• Handle with care, avoid contact with eyes and skin.",
-    "สถานะ": ""
+    "สถานะ": "Sold out"
   },
   {
     "หมวดหมู่": "ATMOSPHERE",
